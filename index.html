@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto de Reconhecimento de Som</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <style>
+        #reproduza_os_sons {
+            background-color: cadetblue;
+        }
+        .header_div {
+            margin-bottom: 20px;
+        }
+        .main_div {
+            margin-top: 30px;
+        }
+        .copy_right_footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #e7e7e7;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="col-xs-12 header_div text-center" id="reproduza_os_sons">
+            <h1>App Web de Sons</h1>
+            <h2>Reproduza os sons: mugido, latido, miado, rugido</h2>
+        </div>
+
+        <div class="col-xs-12 note_div text-center">
+            <h2>Instruções</h2>
+            <p>Para que o app funcione corretamente, por favor, reproduza os áudios dos animais mencionados acima. O sistema detectará o som e exibirá o resultado.</p>
+        </div>
+
+        <div class="col-xs-12 main_div text-center">
+            <center>
+                <button class="btn btn-primary" onclick="startAudioDetection()">Iniciar Detecção de Áudio</button>
+                <h4 id="audio-count">Áudio detectado: 0</h4>
+                <h3 id="audio-class">Áudio: Nenhum</h3>
+                <br>
+                <img id="audio-image" src="default.gif" alt="Animal Image" width="200" height="200">
+            </center>
+        </div>
+
+        <div class="col-xs-12 copy_right_footer text-center">
+            <p>feito por: bernardo</p>
+        </div>
+    </center>
+
+    <script>
+        function startAudioDetection() {
+            // Função para iniciar a detecção de áudio
+            console.log("Detecção de áudio iniciada");
+        }
+    </script>
+</body>
+</html>
